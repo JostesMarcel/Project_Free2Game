@@ -1,0 +1,109 @@
+body {
+    height: 125vh;
+}
+
+.secHero {
+    background: url(../img/RecentlyaddedImg.png) no-repeat center/cover;
+    height: 50vh;
+    width: 93vw;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    margin: 4rem 0 5rem 6rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.secHero h1 {
+    font-size: 3rem;
+    color: white;
+    padding: 20vw 0 0 6vw;
+}
+
+.secRecently {
+    margin: 3rem 0 0 5rem;
+    color: white;
+}
+
+.secRecently .recentPic {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.secRecently h2 {
+    margin: 8rem 0 2rem 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.secRecently h3 {
+    height: 60px;
+    width: 215px;
+}
+
+.secRecently article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
+    margin: 0 0rem 1.5rem 2.4rem;
+    border-radius: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.secRecently article article {
+    display: flex;
+    flex-direction: column;
+    background-color: #102130;
+}
+
+.contentWrapper {
+    margin: 0;
+}
+
+.contentBottom {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.529);
+    margin-top: 50px;
+    padding-top: 1rem;
+}
+
+.contentBottom img {
+    padding: 20px 10px;
+}
+
+.readMore {
+    border: 1px solid #FF4654;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #FF4654;
+    text-decoration: unset;
+}
+
+.windows {
+    margin: 0 10px;
+}
+
+.windows img {
+    padding: 15px;
+    width: 45%;
+    border-radius: 5px;
+    margin: 16px 10px 0 0;
+}
+
+.browser {
+    margin: 0 10px;
+}
+
+.browser img {
+    padding: 15px;
+    width: 45%;
+    border-radius: 5px;
+    margin: 16px 10px 0 0;
+}
+
+@media screen and (max-width: 375px) {
+    .secHero {
+        margin: 8rem 0 6rem 1rem;
+    }
+    .secRecently {
+        margin: 3rem 0 0 0rem;
+    }
+}

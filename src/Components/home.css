@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+.sectionHero {
+    background: url(../img/Hero.png) no-repeat center/cover;
+    height: 70vh;
+    margin: 4rem 0 0 4rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.sectionHero h1 {
+    font-size: 3rem;
+    color: white;
+    width: 40%;
+    padding: 25rem 0 0 5rem;
+}
+
+.sectionRecently {
+    margin: 3rem 2rem 0rem 10rem;
+    color: white;
+    padding-bottom: 10rem;
+}
+
+.sectionRecently .recentPic {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.sectionRecently h2 {
+    margin: 8rem 0 2rem 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.sectionRecently article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    border-radius: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.sectionRecently article article {
+    display: flex;
+    flex-direction: column;
+    background-color: #102130;
+}
+
+.contentWrapper {
+    padding: 0 2rem 1rem 2rem;
+}
+
+.contentWrapper .contentPara {
+    line-height: 2rem;
+    font-family: 'Titillium Web', sans-serif;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.readMore {
+    display: block;
+    width: 35%;
+    margin-top: 3rem;
+    text-align: center;
+    transition: var(--speed-normal);
+    animation-name: out;
+    animation-duration: 10s;
+}
+
+.readMore:hover {
+    border: 1px solid transparent;
+    background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+    transition-delay: 0.8s;
+    background-size: 180px;
+    animation: hover var(--speed-fast) steps(8) forwards;
+    animation-direction: alternate;
+}
+
+@keyframes hover {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: -480px;
+    }
+}
+
+:root {
+    --color-red: #ec1840;
+    --color-purple: #7a18ec;
+    --color-white: #fff;
+    --color-black-1: #111;
+    --color-black-2: #222;
+    --color-black-3: #444;
+    --speed-normal: 0.5s;
+    --speed-fast: 0.8s;
+}
+
+.contentBottom {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.529);
+    padding-top: 1rem;
+}
+
+.contentBottom img {
+    padding: 15px 1rem;
+}
+
+.contentBottom p {
+    padding: 15px;
+}
+
+.animated-box {
+    border-radius: 4px;
+    position: relative;
+}
+
+.animated-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #FF4654, black, #FF4654);
+    background-size: 300% 300%;
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+    margin: 15px 0;
+}
+
+.animated-box.in:after {
+    animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 15% 0%;
+    }
+    50% {
+        background-position: 85% 100%;
+    }
+    100% {
+        background-position: 15% 0%;
+    }
+}
+
+@keyframes frame-enter {
+    0% {
+        clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    25% {
+        clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+        clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+    }
+    75% {
+        -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+    }
+    100% {
+        -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+    }
+}
+
+.buttonOutside {
+    width: 7%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.buttonOutside a {
+    position: absolute;
+    right: 4rem;
+    display: block;
+    background-color: #FF4654;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    cursor: url('../img/eye.png'), auto;
+}
+
+@media screen and (max-width: 375px) {
+    .sectionHero {
+        margin-top: 9rem;
+        margin-left: -1rem;
+    }
+    .sectionRecently {
+        margin: 0;
+    }
+    .sectionRecently article {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .sectionHero h1 {
+        font-size: 2rem;
+        color: white;
+        padding: 22rem 0 0 4rem;
+    }
+}

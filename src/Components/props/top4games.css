@@ -1,0 +1,127 @@
+.sectionTop {
+    color: white;
+    margin-left: 10rem;
+    margin-bottom: 10rem;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+}
+
+.sectionTop4Games {
+    margin-left: 40%;
+    margin-right: 2rem;
+}
+
+.sectionTop4Games article {
+    display: flex;
+    border-radius: 2rem;
+    background-color: #102130;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.sectionTop4Games article .top4div {
+    padding-left: 2rem;
+    width: 300px;
+}
+
+.top4bottom {
+    display: flex;
+}
+
+.top4bottom p {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.top4pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.sectionTop4Games article .testKey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+
+/*---Out ----*/
+
+.sectionTop4Games article:nth-of-type(1) {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    z-index: 1;
+    width: 38%;
+    height: 90%;
+    background: url('../../img/dragon.png') no-repeat center/cover;
+}
+
+.sectionTop4Games article:nth-of-type(1) div:nth-of-type(1) .top4pic {
+    display: none;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4div {
+    margin-top: 23rem;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4div h3 {
+    font-size: 3rem;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4bottom .windows img {
+    background-color: #102130;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4bottom p {
+    background-color: #102130;
+}
+
+.sectionTop4Games article:nth-of-type(1) .testKey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 80%;
+    top: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+    .sectionTop {
+        margin-left: 0;
+    }
+    .sectionTop h2 {
+        padding-bottom: 2rem;
+    }
+    .sectionTop4Games article:nth-of-type(1) {
+        position: absolute;
+        top: -52rem;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 90%;
+        padding: 0;
+    }
+    .sectionTop4Games {
+        position: relative;
+        margin-left: 0%;
+        margin-right: 0;
+        margin-top: 50rem;
+    }
+}

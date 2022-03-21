@@ -1,0 +1,423 @@
+.allgamesHero {
+    background: url(../img/AllgamesDotaHero.png) no-repeat center/cover;
+    height: 50vh;
+    width: 93vw;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    margin: 4rem 0 5rem 6rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.allgamesHero h1 {
+    font-size: 3rem;
+    color: white;
+    padding: 20vw 0 0 6vw;
+}
+
+
+/*------Form--CSS-------*/
+
+.multiselect {
+    width: 200px;
+    margin-left: 10rem;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+
+.selection {
+    margin-left: 5vw;
+    display: flex;
+}
+
+.platforms-Check {
+    background-color: #FF4654;
+    width: 15vh;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 10px 50px;
+    position: relative;
+    margin: 0 3vw 0 8vw;
+    user-select: none;
+    z-index: 3;
+}
+
+.platforms-Check::after {
+    content: url(../img/Vector\ 6.png);
+    height: 0;
+    position: absolute;
+    top: 40%;
+    right: 30px;
+}
+.platforms-Check.handlePlatformChange::after{
+    transition: all .1s linear;
+    transform: rotate(180deg);
+    top: 60%;
+}
+
+.platforms-Check-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -1px;
+    /* align the dropdown to the left */
+    right: -1px;
+    /* align the dropdown to the right */
+    opacity: 0;
+    /* hide the dropdown */
+    transition: opacity 0.4s ease-in-out;
+    height: 20vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events: none;
+    background-color: #102130;
+    z-index: 1;
+    /* avoid mouse click events inside the dropdown */
+}
+.platforms-Check-list li{
+    display: flex;
+    border: 1px solid transparent;
+    background-color: #375470;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 5px 0 5px;
+    z-index: 0;
+}
+
+.handlePlatformChange .platforms-Check-list {
+    opacity: 1;
+    /* display the dropdown */
+    pointer-events: auto;
+    /* make sure that the user still can select checkboxes */
+}
+
+.platforms-Check-list li label {
+    display: block;
+    
+
+    transition: all 0.2s ease-out;
+}
+
+/* .platforms-Check-list li label:hover {
+    background-color: #555;
+    color: white;
+} */
+
+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.customize-radio input[type = 'radio'] {
+        visibility: hidden;
+        position: absolute;
+        top: 6px;
+}
+.customize-radio input[type = 'radio'] ~ span:nth-of-type(1) {
+    cursor: pointer;
+    width: 15px;
+    height:15px;
+    display: inline-block;
+    background-size: 20px 31px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+}
+.customize-radio label > input[type = 'radio']:checked ~ #Cross{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.customize-radio label > input[type = 'radio']:checked ~ #Cross2{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.customize-radio label > input[type = 'radio']:checked ~ #Cross3{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.textField1{
+    margin-left: 10px;
+}
+.textField2{
+    margin-left: 10px;
+}
+.textField3{
+    margin-left: 10px;
+}
+/* Genre/Tag Ceckbox */
+
+.categor-Check {
+    background-color: #FF4654;
+    width: 15vh;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 10px 50px;
+    position: relative;
+    margin-right: 3vw;
+    user-select: none;
+}
+
+.categor-Check::after {
+    content: url(../img/Vector\ 6.png);
+    height: 0;
+    position: absolute;
+    top: 40%;
+    right: 30px;
+}
+
+.categor-Check.handleCategorChange::after {
+    transition: all .1s linear;
+    transform: rotate(180deg);
+    top: 60%;
+}
+
+.categor-Check-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -1px;
+    /* align the dropdown to the left */
+    right: -1px;
+    /* align the dropdown to the right */
+    opacity: 0;
+    /* hide the dropdown */
+    transition: opacity 0.4s ease-in-out;
+    height: 20vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events: none;
+    background-color: #102130;
+    z-index: 1;
+    /* avoid mouse click events inside the dropdown */
+}
+
+.categor-Check-list li{
+    display: flex;
+    border: 1px solid transparent;
+    background-color: #375470;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 5px 0 5px;
+    z-index: 0;
+}
+.handleCategorChange .categor-Check-list {
+    opacity: 1;
+    /* display the dropdown */
+    pointer-events: auto;
+    /* make sure that the user still can select checkboxes */
+}
+
+.categor-Check-list li label {
+    display: block;
+    transition: all 0.2s ease-out;
+}
+
+.categor-Check-list li label:hover {
+}
+input[type=checkbox] {
+    visibility: hidden;
+}
+.Cross4{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #ffffff;
+}
+.textField4{
+    margin-left: 10px;
+}
+.customize-radio2 input:checked ~ .Cross4{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.Cross4:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* SortBy Kategorie */
+.sort-Check {
+    background-color: #FF4654;
+    width: 15vh;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 10px 50px;
+    position: relative;
+    user-select: none;
+}
+
+.sort-Check::after {
+    content: url(../img/Vector\ 6.png);
+    height: 0;
+    position: absolute;
+    top: 40%;
+    right: 30px;
+}
+
+.sort-Check.handleSortChange::after {
+    transition: all .1s linear;
+    transform: rotate(180deg);
+    top: 60%;
+}
+
+.sort-Check-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -1px;
+    /* align the dropdown to the left */
+    right: -1px;
+    /* align the dropdown to the right */
+    opacity: 0;
+    /* hide the dropdown */
+    transition: opacity 0.4s ease-in-out;
+    height: 20vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: #102130;
+    pointer-events: none;
+    /* avoid mouse click events inside the dropdown */
+}
+.sort-Check-list li{
+    display: flex;
+    border: 1px solid transparent;
+    background-color: #375470;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 5px 0 5px;
+    z-index: 0;
+}
+
+.handleSortChange .sort-Check-list {
+    opacity: 1;
+    /* display the dropdown */
+    pointer-events: auto;
+    /* make sure that the user still can select checkboxes */
+}
+
+.sort-Check-list li label {
+    display: block;
+    transition: all 0.2s ease-out;
+}
+
+.sort-Check-list li label:hover {
+}
+
+.customize-radio label > input[type = 'radio']:checked ~ #Cross5{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.customize-radio label > input[type = 'radio']:checked ~ #Cross6{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.customize-radio label > input[type = 'radio']:checked ~ #Cross7{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.customize-radio label > input[type = 'radio']:checked ~ #Cross8{
+    background: url(../img/pngegg.png) no-repeat center/cover;
+}
+.textField5{
+    margin-right: 10px;
+}
+.helloooMapp{
+    margin:2vw 0 0 12vw;
+    display: flex;
+    gap: 2vw;
+}
+.helloooMapp div{
+    border: 1px solid #FF4654;
+    border-radius: 15px;
+    padding: 0 1vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+.errorMessage{
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+.kurbi{
+    background: url(../img/Kurbi.png) no-repeat center/cover;
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+    input[type=submit] {
+        top: 70px;
+        left: 260px;
+    }
+    .allgamesHero {
+        margin: 9rem 0px 7rem 1rem;
+    }
+    .secRecently article {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0px 0rem 8rem 0rem;
+        border-radius: 2rem;
+        font-family: 'Oswald', sans-serif;
+    }
+    .selection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .platforms-Check {
+        margin: 0;
+    }
+    .categor-Check {
+        margin: 1rem 0;
+    }
+}
